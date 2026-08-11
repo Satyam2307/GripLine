@@ -1,0 +1,95 @@
+{
+  "zones": [
+    {
+      "id": "main_straight",
+      "name": "Main Straight",
+      "crop_normalized": {
+        "x_min": 0.10,
+        "y_min": 0.60,
+        "x_max": 0.90,
+        "y_max": 0.95
+      },
+      "map_layout": {
+        "x": 0.05,
+        "y": 0.10,
+        "width": 0.40,
+        "height": 0.30,
+        "is_corner": false
+      },
+      "description": "The primary straight between start/finish and Turn 1."
+    },
+    {
+      "id": "turn_2",
+      "name": "Turn 2",
+      "crop_normalized": {
+        "x_min": 0.00,
+        "y_min": 0.30,
+        "x_max": 0.35,
+        "y_max": 0.60
+      },
+      "map_layout": {
+        "x": 0.55,
+        "y": 0.05,
+        "width": 0.35,
+        "height": 0.30,
+        "is_corner": true
+      },
+      "description": "Second corner — a medium-speed left-hander."
+    },
+    {
+      "id": "turn_4",
+      "name": "Turn 4",
+      "crop_normalized": {
+        "x_min": 0.60,
+        "y_min": 0.05,
+        "x_max": 0.95,
+        "y_max": 0.35
+      },
+      "map_layout": {
+        "x": 0.45,
+        "y": 0.55,
+        "width": 0.40,
+        "height": 0.35,
+        "is_corner": true
+      },
+      "description": "Heavy braking zone into a tight right-hander."
+    },
+    {
+      "id": "final_corner",
+      "name": "Final Corner",
+      "crop_normalized": {
+        "x_min": 0.55,
+        "y_min": 0.55,
+        "x_max": 0.95,
+        "y_max": 0.90
+      },
+      "map_layout": {
+        "x": 0.05,
+        "y": 0.60,
+        "width": 0.30,
+        "height": 0.30,
+        "is_corner": true
+      },
+      "description": "Last corner before the main straight."
+    }
+  ],
+  "text_prompts": [
+    "a dry racing track",
+    "a damp racing track",
+    "a wet racing track"
+  ],
+  "condition_thresholds": {
+    "dry_max": 0.39,
+    "damp_max": 0.69,
+    "wet_min": 0.70
+  },
+  "trend_thresholds": {
+    "drying_delta": -0.08,
+    "worsening_delta": 0.08
+  },
+  "risk_thresholds": {
+    "low_max": 0.44,
+    "medium_max": 0.74,
+    "high_min": 0.75
+  }
+}

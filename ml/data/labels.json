@@ -1,0 +1,44 @@
+{
+  "description": "GripLine labelled test set for CLIP zero-shot track-condition classification.",
+  "model": "openai/clip-vit-base-patch32",
+  "labels": ["dry", "damp", "wet"],
+  "note": "Ground-truth labels are human-assigned based on visual appearance. These are generated images, not real track photos — use for integration testing and demo only.",
+  "samples": [
+    {
+      "filename": "track_dry_01.png",
+      "ground_truth": "dry",
+      "expected_wetness_range": [0.0, 0.39],
+      "description": "Aerial view of a dry racing circuit on a sunny day. Clear blue sky, light grey tarmac with no moisture."
+    },
+    {
+      "filename": "track_dry_02.png",
+      "ground_truth": "dry",
+      "expected_wetness_range": [0.0, 0.39],
+      "description": "Close-up ground-level view of a dry track straight. Sunlit asphalt with tire rubber marks."
+    },
+    {
+      "filename": "track_damp_01.png",
+      "ground_truth": "damp",
+      "expected_wetness_range": [0.40, 0.69],
+      "description": "Aerial view of a damp track corner after light rain. Darker patches of moisture, no standing water."
+    },
+    {
+      "filename": "track_damp_02.png",
+      "ground_truth": "damp",
+      "expected_wetness_range": [0.40, 0.69],
+      "description": "Ground-level racing circuit corner with damp surface and overcast sky."
+    },
+    {
+      "filename": "track_wet_01.png",
+      "ground_truth": "wet",
+      "expected_wetness_range": [0.70, 1.0],
+      "description": "Aerial view of a track during heavy rain. Standing water, spray from tires, reflective wet surface."
+    },
+    {
+      "filename": "track_wet_02.png",
+      "ground_truth": "wet",
+      "expected_wetness_range": [0.70, 1.0],
+      "description": "Ground-level view of a racing circuit in heavy rainfall. Puddles, spray, dark storm clouds."
+    }
+  ]
+}

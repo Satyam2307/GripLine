@@ -1,0 +1,22 @@
+[project]
+name = "gripline-ml"
+version = "0.1.0"
+description = "GripLine — AI co-pilot for track-condition analysis (ML layer)"
+requires-python = ">=3.11"
+dependencies = [
+    "torch",
+    "torchvision",
+    "transformers",
+    "Pillow",
+    "opencv-python-headless",
+    "numpy",
+    "fastapi",
+    "uvicorn[standard]",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.pytest.ini_options]
+testpaths = ["ml/tests"]
+pythonpath = ["."]

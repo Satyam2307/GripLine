@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+pydantic
+python-multipart
+transformers
+torch
+Pillow
+pytest
+httpx
+opencv-python-headless

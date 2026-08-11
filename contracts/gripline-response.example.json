@@ -1,0 +1,105 @@
+{
+  "session_id": "demo_001",
+  "source": {
+    "filename": "track_wet_01.png",
+    "type": "image",
+    "duration_seconds": 0.0
+  },
+  "processed_frames": 1,
+  "overall": {
+    "base_condition": "Wet",
+    "display_condition": "Wet",
+    "wetness_score": 0.8862,
+    "trend": "Stable",
+    "confidence": 0.82
+  },
+  "zones": [
+    {
+      "id": "main_straight",
+      "name": "Main Straight",
+      "base_condition": "Wet",
+      "display_condition": "Wet",
+      "wetness_score": 0.885,
+      "trend": "Stable",
+      "risk": "High",
+      "confidence": 0.82
+    },
+    {
+      "id": "turn_2",
+      "name": "Turn 2",
+      "base_condition": "Wet",
+      "display_condition": "Wet",
+      "wetness_score": 0.87,
+      "trend": "Stable",
+      "risk": "High",
+      "confidence": 0.8
+    },
+    {
+      "id": "turn_4",
+      "name": "Turn 4",
+      "base_condition": "Wet",
+      "display_condition": "Wet",
+      "wetness_score": 0.91,
+      "trend": "Stable",
+      "risk": "High",
+      "confidence": 0.86
+    },
+    {
+      "id": "final_corner",
+      "name": "Final Corner",
+      "base_condition": "Wet",
+      "display_condition": "Wet",
+      "wetness_score": 0.88,
+      "trend": "Stable",
+      "risk": "High",
+      "confidence": 0.82
+    }
+  ],
+  "recommendation": {
+    "text": "Wet tires recommended. However, Turn 2, Turn 4, Final Corner remains high risk.",
+    "suggested_tire": "Wet",
+    "confidence": 0.82
+  },
+  "radio_call": {
+    "text": "GripLine to pit wall. Turn 4 remains wet. High-risk braking zone.",
+    "severity": "high",
+    "should_play": true
+  },
+  "alerts": [
+    {
+      "id": "high_risk_main_straight",
+      "timestamp_seconds": 0.0,
+      "severity": "medium",
+      "zone_id": "main_straight",
+      "message": "Main Straight remains wet and is a high-risk zone."
+    },
+    {
+      "id": "high_risk_turn_2",
+      "timestamp_seconds": 0.0,
+      "severity": "high",
+      "zone_id": "turn_2",
+      "message": "Turn 2 remains wet and is a high-risk zone."
+    },
+    {
+      "id": "high_risk_turn_4",
+      "timestamp_seconds": 0.0,
+      "severity": "high",
+      "zone_id": "turn_4",
+      "message": "Turn 4 remains wet and is a high-risk zone."
+    },
+    {
+      "id": "high_risk_final_corner",
+      "timestamp_seconds": 0.0,
+      "severity": "high",
+      "zone_id": "final_corner",
+      "message": "Final Corner remains wet and is a high-risk zone."
+    }
+  ],
+  "timeline": [
+    {
+      "timestamp_seconds": 0.0,
+      "overall_wetness": 0.8862,
+      "trend": "Stable"
+    }
+  ]
+}
