@@ -23,6 +23,8 @@ import {
 
 import { wetSampleResponse, dampSampleResponse, drySampleResponse } from './mocks/sampleResponses'
 
+import { analyzeFileClientSide } from './services/clientAnalyzer'
+
 import type { GripLineResponse } from './types/gripline'
 import { demoResponse } from './mocks/demoResponse'
 import { analyzeTrack } from './services/api'
@@ -164,8 +166,10 @@ function App() {
       setCurrentResponse(result)
       triggerAutoRadioCall(result)
     } catch (err: any) {
-      console.error('Analysis error:', err)
-      setError(err.message || 'Failed to analyze track condition.')
+      console.warn('Backend server offline — running client analyzer for custom upload:', err)
+      const fallbackResult = await analyzeFileClientSide(selectedFile)
+      setCurrentResponse(fallbackResult)
+      triggerAutoRadioCall(fallbackResult)
     } finally {
       setIsLoading(false)
     }
