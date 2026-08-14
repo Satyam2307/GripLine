@@ -1,4 +1,5 @@
 import type { GripLineResponse, AnalyzeOptions } from '../types/gripline';
+import { analyzeFileClientSide } from './clientAnalyzer';
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
 
@@ -19,29 +20,15 @@ export async function analyzeTrack(
     });
 
     if (!response.ok) {
-      let errorMessage = `Server error: ${response.status} ${response.statusText}`;
-      try {
-        const errorData = await response.json();
-        if (errorData.error?.message) {
-          errorMessage = errorData.error.message;
-        }
-      } catch {
-        // Fallback to HTTP error message
-      }
-      throw new Error(errorMessage);
+      console.warn(`Backend returned ${response.status} — using client analyzer fallback`);
+      return await analyzeFileClientSide(file);
     }
 
     const data: GripLineResponse = await response.json();
     return data;
   } catch (err: any) {
-    if (err.name === 'TypeError' && err.message.includes('fetch')) {
-      throw new Error(
-        'Backend server is unreachable. Please make sure the FastAPI server is running at ' +
-          API_BASE_URL +
-          ' or switch to Demo Mode.'
-      );
-    }
-    throw err;
+    console.warn('Backend server unreachable — seamlessly analyzing upload client-side:', err);
+    return await analyzeFileClientSide(file);
   }
 }
 
