@@ -468,7 +468,7 @@ function App() {
           </div>
         </section>
 
-        {/* Automatic Radio Communication Panel (No Manual Play Button) */}
+        {/* Radio Communications Panel */}
         <aside className="panel radio-panel" aria-label="Radio communications panel">
           <div className="panel-header compact-header">
             <div className="panel-heading">
@@ -527,16 +527,25 @@ function App() {
               <span>Broadcasting live voice alert to driver...</span>
             </div>
           )}
+        </aside>
+
+        {/* Dedicated Tire Strategy Panel (Shifted Upwards, No Scroll Required) */}
+        <section className="panel strategy-panel" aria-label="Tire strategy panel">
+          <div className="panel-header compact-header">
+            <div className="panel-heading">
+              <ShieldCheck size={16} />
+              <span>Tire Strategy</span>
+            </div>
+          </div>
 
           <div className="strategy-box">
-            <p className="label">Tire strategy</p>
             <div className="strategy-row">
-              <ShieldCheck size={16} />
-              <strong>{ui.suggestedTire}</strong>
+              <ShieldCheck size={18} color="var(--accent)" />
+              <strong style={{ fontSize: '16px' }}>{ui.suggestedTire} Tires</strong>
             </div>
             <p className="callout">{ui.recommendationText.toUpperCase()}</p>
           </div>
-        </aside>
+        </section>
 
         <section className="panel chart-panel" aria-label="Wetness trend chart">
           <div className="panel-header">
