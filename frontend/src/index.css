@@ -251,7 +251,7 @@ h1 {
   grid-template-columns: 1.05fr 1.45fr 0.95fr;
   grid-template-areas:
     'upload status radio'
-    'chart chart strategy'
+    'chart chart radio'
     'zones zones timeline';
   gap: 18px;
 }
@@ -291,10 +291,6 @@ h1 {
 
 .radio-panel {
   grid-area: radio;
-}
-
-.strategy-panel {
-  grid-area: strategy;
 }
 
 .chart-panel {
