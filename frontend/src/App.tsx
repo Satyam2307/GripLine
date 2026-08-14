@@ -468,12 +468,12 @@ function App() {
           </div>
         </section>
 
-        {/* Radio & Tire Strategy Combined Upper-Right Panel */}
-        <aside className="panel radio-panel" aria-label="Radio & Tire Strategy Panel">
+        {/* Radio Communications Separate Panel Box */}
+        <aside className="panel radio-panel" aria-label="Radio communications panel">
           <div className="panel-header compact-header">
             <div className="panel-heading">
               <Radio size={16} />
-              <span>Pit Wall & Strategy</span>
+              <span>Radio</span>
             </div>
             <span className="radio-tag">
               <span className="live-dot" aria-hidden="true" />
@@ -481,20 +481,19 @@ function App() {
             </span>
           </div>
 
-          {/* Radio Call Section */}
           <div className={`radio-card ${isRadioBroadcasting ? 'broadcasting' : ''}`}>
             <div className="radio-icon" aria-hidden="true">
               {isRadioBroadcasting ? (
-                <Volume2 className="pulse-red" size={18} color="#ef4444" />
+                <Volume2 className="pulse-red" size={16} color="#ef4444" />
               ) : (
-                <Radio size={18} />
+                <Radio size={16} />
               )}
             </div>
             <div>
               <span className="auto-call-badge">
-                {isRadioBroadcasting ? '⚡ EMERGENCY CALL BROADCASTING' : '⚡ AUTOMATIC PIT CALL'}
+                {isRadioBroadcasting ? '⚡ EMERGENCY BROADCAST' : '⚡ AUTOMATIC PIT CALL'}
               </span>
-              <p style={{ margin: 0, fontSize: '12px', color: 'var(--muted)', fontStyle: 'italic' }}>
+              <p style={{ margin: 0, fontSize: '11px', color: 'var(--muted)', fontStyle: 'italic' }}>
                 {isRadioBroadcasting
                   ? 'Broadcasting live voice instructions to driver...'
                   : 'Emergency radio messages automatically speak via voice call.'}
@@ -509,14 +508,14 @@ function App() {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                gap: '8px',
-                padding: '8px',
-                margin: '8px 0',
+                gap: '6px',
+                padding: '6px',
+                marginTop: '6px',
                 background: 'rgba(239, 68, 68, 0.1)',
                 border: '1px solid rgba(239, 68, 68, 0.3)',
-                borderRadius: '8px',
+                borderRadius: '6px',
                 color: '#fca5a5',
-                fontSize: '11px',
+                fontSize: '10px',
                 fontWeight: 600,
               }}
             >
@@ -526,24 +525,28 @@ function App() {
                 <div className="audio-wave-bar" />
                 <div className="audio-wave-bar" />
               </div>
-              <span>Broadcasting live voice alert to driver...</span>
+              <span>Broadcasting live voice alert...</span>
             </div>
           )}
+        </aside>
 
-          {/* Tire Strategy Box (Shifted High Upwards, Immediately Below Radio) */}
-          <div className="strategy-box" style={{ marginTop: '12px' }}>
-            <div className="strategy-header" style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '8px' }}>
-              <ShieldCheck size={16} color="var(--accent)" />
-              <span style={{ fontSize: '12px', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)' }}>
-                Tire Strategy
-              </span>
+        {/* Tire Strategy Separate Panel Box (Directly below Radio Panel) */}
+        <section className="panel strategy-panel" aria-label="Tire strategy panel">
+          <div className="panel-header compact-header">
+            <div className="panel-heading">
+              <ShieldCheck size={16} />
+              <span>Tire Strategy</span>
             </div>
-            <div className="strategy-row" style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '6px' }}>
-              <strong style={{ fontSize: '17px', color: 'var(--text)' }}>{ui.suggestedTire} Tires</strong>
+          </div>
+
+          <div className="strategy-box">
+            <div className="strategy-row">
+              <ShieldCheck size={16} color="var(--accent)" />
+              <strong style={{ fontSize: '15px' }}>{ui.suggestedTire} Tires</strong>
             </div>
             <p className="callout">{ui.recommendationText.toUpperCase()}</p>
           </div>
-        </aside>
+        </section>
 
         <section className="panel chart-panel" aria-label="Wetness trend chart">
           <div className="panel-header">
