@@ -113,7 +113,7 @@ body::after {
   z-index: 1;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 28px 20px 42px;
+  padding: 12px 16px 16px;
   background: transparent;
 }
 
@@ -153,11 +153,11 @@ label:focus-visible {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 16px;
-  padding: 16px 18px;
-  margin-bottom: 12px;
+  gap: 12px;
+  padding: 8px 14px;
+  margin-bottom: 8px;
   border: 1px solid var(--border);
-  border-radius: 18px;
+  border-radius: 14px;
   background: linear-gradient(180deg, rgba(9, 15, 24, 0.18), rgba(9, 15, 24, 0.12));
   box-shadow: 0 12px 28px rgba(2, 6, 23, 0.08);
 }
@@ -184,57 +184,57 @@ label:focus-visible {
 .brand-block {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 14px;
 }
 
 .brand-mark {
   display: grid;
   place-items: center;
-  width: 42px;
-  height: 42px;
-  border-radius: 12px;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
   background: linear-gradient(135deg, rgba(125, 211, 252, 0.22), rgba(56, 189, 248, 0.4));
   border: 1px solid rgba(125, 211, 252, 0.38);
   color: var(--accent);
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 800;
   letter-spacing: 0.08em;
   box-shadow: inset 0 1px 0 rgba(255,255,255,0.1), 0 0 18px rgba(56, 189, 248, 0.12);
 }
 
 .eyebrow {
-  margin: 0 0 4px;
-  font-size: 0.74rem;
-  letter-spacing: 0.28rem;
+  margin: 0 0 2px;
+  font-size: 0.68rem;
+  letter-spacing: 0.24rem;
   color: var(--muted);
 }
 
 h1 {
   margin: 0;
-  font-size: clamp(1.25rem, 2vw, 2.1rem);
-  letter-spacing: 0.1rem;
+  font-size: clamp(1.1rem, 1.6vw, 1.7rem);
+  letter-spacing: 0.08rem;
   font-weight: 700;
 }
 
 .demo-status {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   white-space: nowrap;
-  padding: 9px 16px;
+  padding: 6px 12px;
   border-radius: 8px;
   border: 1px solid var(--border);
   background: var(--panel-soft);
   color: var(--text);
-  font-size: 0.76rem;
+  font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 .status-dot {
-  width: 7px;
-  height: 7px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background: var(--good);
   box-shadow: 0 0 10px rgba(53, 211, 153, 0.7);
@@ -253,20 +253,20 @@ h1 {
     'upload status radio'
     'chart chart radio'
     'zones zones timeline';
-  gap: 18px;
+  gap: 12px;
 }
 
 .panel {
   position: relative;
   background: linear-gradient(180deg, rgba(7, 13, 21, 0.12), rgba(7, 13, 21, 0.18));
   border: 1px solid var(--border);
-  border-radius: 22px;
+  border-radius: 16px;
   box-shadow:
-    0 18px 28px rgba(2, 6, 23, 0.06),
+    0 14px 22px rgba(2, 6, 23, 0.06),
     inset 0 1px 0 rgba(255,255,255,0.015),
-    inset 0 -18px 18px rgba(8, 14, 22, 0.02),
+    inset 0 -14px 14px rgba(8, 14, 22, 0.02),
     0 0 0 1px rgba(255,255,255,0.003);
-  padding: 18px 18px 16px;
+  padding: 12px 14px 10px;
   transform: perspective(1200px) rotateX(0deg) rotateY(0deg);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
@@ -774,9 +774,9 @@ h2 {
 
 .radio-card {
   display: flex;
-  gap: 10px;
-  padding: 14px;
-  border-radius: 16px;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 12px;
   background: linear-gradient(180deg, rgba(15, 23, 42, 0.22), rgba(15, 23, 42, 0.16));
   border: 1px solid var(--border);
   margin-bottom: 0;
@@ -785,25 +785,25 @@ h2 {
 .radio-icon {
   display: grid;
   place-items: center;
-  width: 36px;
-  height: 36px;
+  width: 28px;
+  height: 28px;
   flex-shrink: 0;
-  border-radius: 10px;
+  border-radius: 8px;
   background: radial-gradient(circle at 30% 30%, rgba(239, 68, 68, 0.25), rgba(125, 211, 252, 0.08));
   color: var(--accent);
-  box-shadow: 0 0 16px rgba(239, 68, 68, 0.25);
+  box-shadow: 0 0 12px rgba(239, 68, 68, 0.25);
 }
 
 .radio-card p {
   margin: 0;
-  line-height: 1.55;
-  font-size: 0.96rem;
+  line-height: 1.4;
+  font-size: 0.82rem;
   color: #dfeaf8;
 }
 
 .strategy-box {
-  padding: 14px;
-  border-radius: 16px;
+  padding: 8px 10px;
+  border-radius: 12px;
   border: 1px solid var(--border);
   background: linear-gradient(180deg, rgba(15, 23, 42, 0.22), rgba(15, 23, 42, 0.16));
 }
@@ -811,16 +811,16 @@ h2 {
 .strategy-row {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   color: var(--text);
-  margin-bottom: 10px;
+  margin-bottom: 4px;
 }
 
 .callout {
   margin: 0;
   color: var(--warn);
-  letter-spacing: 0.08em;
-  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  font-size: 0.7rem;
 }
 
 .chart-wrap {
