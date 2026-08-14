@@ -248,10 +248,10 @@ h1 {
 
 .dashboard-grid {
   display: grid;
-  grid-template-columns: 1.05fr 1.45fr 0.85fr;
+  grid-template-columns: 1.05fr 1.45fr 0.95fr;
   grid-template-areas:
     'upload status radio'
-    'chart chart radio'
+    'chart chart strategy'
     'zones zones timeline';
   gap: 18px;
 }
@@ -291,6 +291,10 @@ h1 {
 
 .radio-panel {
   grid-area: radio;
+}
+
+.strategy-panel {
+  grid-area: strategy;
 }
 
 .chart-panel {
@@ -995,8 +999,8 @@ h2 {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
       'upload status'
+      'radio strategy'
       'chart chart'
-      'radio radio'
       'zones timeline';
   }
 }
@@ -1023,6 +1027,7 @@ h2 {
       'upload'
       'status'
       'radio'
+      'strategy'
       'chart'
       'zones'
       'timeline';
